@@ -38,7 +38,7 @@ download_release() {
 	version="$1"
 	filename="$2"
 	platform=$(uname | tr '[:upper:]' '[:lower:]')
-	arch=$(uname --machine)
+	arch=$(uname -m)
 
 	url="$GH_REPO/releases/download/v${version}/novops_${platform}_${arch}.zip"
 

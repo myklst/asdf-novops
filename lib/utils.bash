@@ -45,6 +45,11 @@ download_release() {
 		platform='macos'
 	fi
 
+	if [[ "$arch" == 'arm64' ]];
+	then
+		arch='aarch64'
+	fi
+
 	url="$GH_REPO/releases/download/v${version}/novops_${platform}_${arch}.zip"
 
 	echo "* Downloading $TOOL_NAME release $version..."

@@ -41,7 +41,7 @@ asdf install novops latest
 asdf global novops latest
 
 # Now novops commands are available
-novops help
+novops --version
 ```
 
 Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to

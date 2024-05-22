@@ -40,13 +40,11 @@ download_release() {
 	platform=$(uname | tr '[:upper:]' '[:lower:]')
 	arch=$(uname -m)
 
-	if [[ "$platform" == 'darwin' ]];
-	then
+	if [[ "$platform" == 'darwin' ]]; then
 		platform='macos'
 	fi
 
-	if [[ "$arch" == 'arm64' ]];
-	then
+	if [[ "$arch" == 'arm64' ]]; then
 		arch='aarch64'
 	fi
 

@@ -40,6 +40,11 @@ download_release() {
 	platform=$(uname | tr '[:upper:]' '[:lower:]')
 	arch=$(uname -m)
 
+	if [[ "$platform" == 'darwin' ]];
+	then
+		platform='macos'
+	fi
+
 	url="$GH_REPO/releases/download/v${version}/novops_${platform}_${arch}.zip"
 
 	echo "* Downloading $TOOL_NAME release $version..."
